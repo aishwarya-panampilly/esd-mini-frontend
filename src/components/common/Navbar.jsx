@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import UserService from '../service/UserService';
+import '../presentation/Navbar.css'
 
 function Navbar() {
   const [isAuthenticated, setIsAuthenticated] = useState(UserService.isAuthenticated());

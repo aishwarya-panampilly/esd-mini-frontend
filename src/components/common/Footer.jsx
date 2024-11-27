@@ -1,10 +1,11 @@
 import React from 'react'
+import '../presentation/Footer.css'
 
 const FooterComponent = () => {
     return (
         <div>
             <footer className='footer'>
-                <span>Aishwarya J Panampilly &copy; {new Date().getFullYear()} </span>
+                <span>Aishwarya J Panampilly {new Date().getFullYear()} </span>
             </footer>
         </div>
     )

@@ -1,0 +1,91 @@
+/* General container styling */
+.user-management-container {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1200px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header styling */
+  .user-management-container h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Table customization */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  thead {
+    background-color: #ac8fe5; /* Dark gray background for the header */
+    color: #2f0e55;
+  }
+  
+  th, td {
+    padding: 12px 15px;
+    text-align: center;
+  }
+
+  th {
+    text-align: center !important;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Alternating row background */
+  }
+  
+  tbody tr:hover {
+    background-color: #e9ecef; /* Light gray hover effect */
+  }
+  
+  /* Button styling */
+  button {
+    font-size: 1rem; /* Bigger button text */
+    padding: 12px 20px; /* Larger padding for a bigger button */
+    border-radius: 8px; /* More rounded corners */
+    color: #fff;
+    background-color: #420974;
+    border: none; /* Remove default button border */
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #741ccb; /* Darker blue on hover */
+}
+
+button a {
+    color: #fff !important; /* Ensure text color is white */
+    text-decoration: none; /* Remove underlined link */
+}
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+      display: block;
+    }
+  
+    th {
+      display: none;
+    }
+  
+    td {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+  
+    td::before {
+      content: attr(data-label); /* Add data-label for better visibility */
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+  

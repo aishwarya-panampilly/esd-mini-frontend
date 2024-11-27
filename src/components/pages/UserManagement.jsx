@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import UserService from '../service/UserService';
+import '../presentation/UserManagement.css'
 
 function UserManagementPage() {
   const [users, setUsers] = useState([]);
@@ -43,6 +44,7 @@ if (error) {
             <th>First Name</th>
             <th>Last Name</th>
             <th>Email</th>
+            <th>Update</th>
           </tr>
         </thead>
         <tbody>

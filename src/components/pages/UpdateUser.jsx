@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import UserService from '../service/UserService';
+import '../presentation/UpdateUser.css'
 
 function UpdateUser() {
   const navigate = useNavigate();

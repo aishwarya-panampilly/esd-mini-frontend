@@ -1,0 +1,47 @@
+/* src/css/navbar.css */
+
+nav {
+    background-color: #3a1a50; 
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav ul li {
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #ffc107; /* Bootstrap warning yellow color */
+  }
+  
+  nav ul li a.active {
+    border-bottom: 2px solid #ffc107; /* Highlight for active links */
+  }
+  
+  nav ul li:last-child a {
+    background-color: #dc3545; /* Bootstrap danger red color */
+    padding: 5px 10px;
+    border-radius: 4px;
+  }
+  
+  nav ul li:last-child a:hover {
+    background-color: #c82333; /* Darker red for hover */
+  }
+  
