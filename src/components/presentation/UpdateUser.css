@@ -29,7 +29,8 @@
   }
   
   /* Input field styling */
-  .form-group input {
+  .form-group input,
+  .form-group select {
     width: 100%;
     padding: 10px;
     border-radius: 6px;
@@ -39,12 +40,19 @@
   }
   
   /* Focused input field styling */
-  .form-group input:focus {
+  .form-group input:focus
+  .form-group select:focus {
     border-color: #420974;
     outline: none;
     box-shadow: 0 0 5px rgba(66, 9, 116, 0.5);
   }
   
+  /* Dropdown (select) specific styling */
+.form-group select {
+  background-color: #fff;
+  cursor: pointer;
+}
+
   /* Submit button styling */
   button[type="submit"] {
     width: 100%;

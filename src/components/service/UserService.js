@@ -48,6 +48,30 @@ class UserService{
         }
     }
 
+    static async getCoursesByEmployeeId(employeeId, token) {
+        try {
+            const response = await axios.get(`${UserService.BASE_URL}/auth/${employeeId}/course`, {
+                headers: { Authorization: `Bearer ${token}` }
+            });
+            return response.data;
+        } catch (err) {
+            throw err;
+        }
+    }
+
+    static async getAllCourses(token) {
+        try {
+            const response = await axios.get(`${UserService.BASE_URL}/auth/courses`, {
+                headers: { Authorization: `Bearer ${token}` }
+            });
+            return response.data;  // Assuming response.data contains the list of courses
+        } catch (err) {
+            console.error('Error fetching courses:', err.response ? err.response.data : err.message);
+            throw err;
+        }
+    }
+    
+
     /**AUTHENTICATION CHECKER */
     static logout(){
         localStorage.removeItem('token')

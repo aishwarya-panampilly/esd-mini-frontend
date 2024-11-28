@@ -64,6 +64,10 @@ button a {
     color: #fff !important; /* Ensure text color is white */
     text-decoration: none; /* Remove underlined link */
 }
+
+table td.course-column {
+  text-align: center; /* This will center-align the course code specifically */
+}
   
   /* Responsive adjustments */
   @media (max-width: 768px) {

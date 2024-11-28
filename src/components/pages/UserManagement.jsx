@@ -19,7 +19,8 @@ function UserManagementPage() {
       const response = await UserService.getAllUsers(token);
       console.log(response);
       if (response && Array.isArray(response.employeesList)) {
-        setUsers(response.employeesList); // Set the employee list to the state
+        const filteredUsers = response.employeesList.filter(user => user.title !== "ROLE_ADMIN");
+        setUsers(filteredUsers); // Set the employee list to the state
       } else {
         throw new Error("Invalid response format: Expected 'employeesList' to be an array.");
       }// Assuming the list of users is under the key 'ourUsersList'
@@ -36,7 +37,7 @@ if (error) {
 
   return (
     <div className="user-management-container">
-      <h2>Faculty List</h2>
+      <h2>Employee List</h2>
       <table>
         <thead>
           <tr>
@@ -44,6 +45,7 @@ if (error) {
             <th>First Name</th>
             <th>Last Name</th>
             <th>Email</th>
+            <th>Course Code</th>
             <th>Update</th>
           </tr>
         </thead>
@@ -54,6 +56,7 @@ if (error) {
               <td>{user.firstName}</td>
               <td>{user.lastName}</td>
               <td>{user.email}</td>
+              <td>{user.facultyCourses && user.facultyCourses.length > 0 ? user.facultyCourses.map(fc => fc.course.courseCode).join(', ') : 'N/A'}</td>
               <td>
                 <button><Link to={`/auth/update/${user.employeeId}`}>
                   Update
