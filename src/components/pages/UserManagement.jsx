@@ -45,6 +45,7 @@ if (error) {
             <th>First Name</th>
             <th>Last Name</th>
             <th>Email</th>
+            <th>Photo</th>
             <th>Course Code</th>
             <th>Update</th>
           </tr>
@@ -56,6 +57,17 @@ if (error) {
               <td>{user.firstName}</td>
               <td>{user.lastName}</td>
               <td>{user.email}</td>
+              <td >
+                  {user.photographPath ? (
+                  <img 
+                      src={user.photographPath} 
+                      alt={`${user.firstName} ${user.lastName}`} 
+                      className='photo'
+                  />
+                  ) : (
+                  'N/A'
+                  )}
+              </td>
               <td>{user.facultyCourses && user.facultyCourses.length > 0 ? user.facultyCourses.map(fc => fc.course.courseCode).join(', ') : 'N/A'}</td>
               <td>
                 <button><Link to={`/auth/update/${user.employeeId}`}>

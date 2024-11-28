@@ -68,7 +68,13 @@ button a {
 table td.course-column {
   text-align: center; /* This will center-align the course code specifically */
 }
-  
+
+.photo {
+  width :100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: contain;
+}
   /* Responsive adjustments */
   @media (max-width: 768px) {
     table, thead, tbody, th, td, tr {
